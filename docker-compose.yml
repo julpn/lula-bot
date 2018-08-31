@@ -1,0 +1,27 @@
+version: '3'
+services:
+  db:
+    image: postgres
+    volumes:
+      - ./tmp/db:/var/lib/postgresql/data
+  web:
+    build: .
+    command: bundle exec rails s -p 3000 -b '0.0.0.0'
+    volumes:
+      - .:/wedding-bot
+    ports:
+      - "3001:3000"
+    depends_on:
+      - db
+  redis:
+    image: redis:latest
+    ports:
+      - "6379:6379"
+  sidekiq:
+    build: .
+    command: bundle exec sidekiq
+    volumes:
+      - .:/wedding-bot
+    depends_on:
+      - db
+      - redis
