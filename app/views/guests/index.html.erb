@@ -1,0 +1,32 @@
+<div class="container">
+  <%= render "layouts/sidenav" %>
+
+  <div class="content">
+    <%= form_with scope: :guest, local: true do |form| %>
+      <p>
+        <%= form.label :name %><br>
+        <%= form.text_field :first_name %>
+      </p>
+      <p>
+        <%= form.label :phone_number %><br>
+        <%= form.text_field :phone %>
+      </p>
+      <p>
+        <%= form.submit %>
+      </p>
+    <% end %>
+    
+    <table border="1">
+      <tr>
+        <th>Guest Name</th>
+        <th>Phone Number</th>
+      </tr>
+      <% @guests.each do |guest| %>
+        <tr>
+          <td><%= guest.first_name %></td>
+          <td><%= guest.phone %></td>
+        </tr>
+      <% end %>
+    </table>
+  </div>
+</div>
