@@ -16,6 +16,7 @@ gem 'uglifier', '>= 1.3.0'
 gem 'sidekiq'
 gem 'dotenv-rails'
 gem 'devise'
+gem 'airbrake', '~> 7.3'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'mini_racer', platforms: :ruby
 
