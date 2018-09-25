@@ -1,0 +1,20 @@
+<h2>
+  <a href="/messages/new">Add a new message</a>
+</h2>
+<div class="container">
+
+  <div class="content">
+    <div class="square-container">
+      <% @messages.each do |message| %>
+        <div class="square">
+          <%= link_to edit_message_path(message) do %>
+            <div class="content">
+              <h4><%= message.title %></h4>
+              <h4><%= message.scheduled_time %></h4>
+            </div>
+          <% end %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>

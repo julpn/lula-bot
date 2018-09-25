@@ -1,0 +1,77 @@
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro);
+
+$black: #243438;
+$redAlert: #F20C0C;
+$poppy: #FF533D;
+$midnight: #253439;
+$lilac: #F7C1F7;
+$sky: #CAEBF2;
+$white: #FFF;
+$gray10: #F1F1F1;
+$gray20: #E6E6E6;
+$gray40: #BFBFBF;
+$gray60: #808080;
+
+body {
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+h1 {
+  font-size: 42px;
+  color: $black;
+}
+
+h2 {
+  font-size: 28px;
+  color: $black;
+}
+
+h3 {
+  font-size: 18px;
+  color: $black;
+}
+
+h3.white {
+  font-size: 18px;
+  color: $white;
+}
+
+h3.gray {
+  font-size: 18px;
+  color: $black;
+}
+
+h4 {
+  font-size: 16px;
+  color: $black;
+}
+
+p {
+  font-size: 16px;
+  color: $black;
+}
+
+p.alert {
+  font-size: 16px;
+  color: $redAlert;
+}
+
+p.gray {
+  font-size: 16px;
+  color: $gray60;
+}
+
+.p2 {
+  font-size: 14px;
+  color: $black;
+}
+
+.p2.alert {
+  font-size: 14px;
+  color: $redAlert;
+}
+
+.p2.gray {
+  font-size: 14px;
+  color: $gray60;
+}

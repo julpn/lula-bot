@@ -1,7 +1,5 @@
 <div class="container">
-  <%= render "layouts/sidenav" %>
-
-  <div class="content">
+   <div class="content">
     <%= form_with scope: :guest, local: true do |form| %>
       <p>
         <%= form.label :name %><br>
@@ -15,7 +13,7 @@
         <%= form.submit %>
       </p>
     <% end %>
-    
+
     <table border="1">
       <tr>
         <th>Guest Name</th>

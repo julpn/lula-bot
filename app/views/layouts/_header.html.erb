@@ -2,11 +2,18 @@
   <div id="logo">
     <%= image_tag("logo.png", size: "250x73", alt: "lula logo") %>
   </div>
-  <div id="sign-in-links">
+  <div class="header-links">
     <% if user_signed_in? %>
-      <%= link_to('Logout', destroy_user_session_path, method: :delete) %>
+      <div class="dropdown">
+        <button class="dropbtn"><%=current_user.first_name%></button>
+        <div class="dropdown-content">
+          <a href="/messages">My Messages</a>
+          <a href="/guests">My Guests</a>
+          <%= link_to('Logout', destroy_user_session_path, method: :delete) %>
+        </div>
+      </div>
     <% else %>
-      <%= link_to('Login', new_user_session_path)  %>
+      <%= link_to('Login', new_user_session_path, class: 'dropbtn')  %>
     <% end %>
   </div>
 </div>

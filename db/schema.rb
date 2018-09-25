@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_09_01_014206) do
+ActiveRecord::Schema.define(version: 2018_09_25_033202) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -30,7 +30,22 @@ ActiveRecord::Schema.define(version: 2018_09_01_014206) do
     t.datetime "scheduled_time"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "title"
     t.index ["user_id"], name: "index_messages_on_user_id"
+  end
+
+  create_table "queued_messages", force: :cascade do |t|
+    t.bigint "user_id"
+    t.bigint "guest_id"
+    t.bigint "message_id"
+    t.string "job_id", default: "", null: false
+    t.integer "status"
+    t.datetime "scheduled_time"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["guest_id"], name: "index_queued_messages_on_guest_id"
+    t.index ["message_id"], name: "index_queued_messages_on_message_id"
+    t.index ["user_id"], name: "index_queued_messages_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|

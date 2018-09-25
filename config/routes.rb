@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   get 'guests', to: 'guests#index'
   resources :guests
 
-  resources :message
+  resources :messages
   get 'messages', to: 'message#index'
   get 'home', to: 'home#index'
   get 'welcome/index'
