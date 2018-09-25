@@ -1,3 +1,2 @@
 class QueuedMessage < ApplicationRecord
-
 end
