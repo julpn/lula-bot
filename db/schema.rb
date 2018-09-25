@@ -30,7 +30,7 @@ ActiveRecord::Schema.define(version: 2018_09_25_033202) do
     t.datetime "scheduled_time"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "title"
+    t.string "title", default: ""
     t.index ["user_id"], name: "index_messages_on_user_id"
   end
 
