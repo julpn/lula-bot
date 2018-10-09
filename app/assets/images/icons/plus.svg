@@ -1,0 +1,16 @@
+
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<!-- Generator: Sketch 51.2 (57519) - http://www.bohemiancoding.com/sketch -->
+	<desc>Created with Sketch.</desc>
+	<defs>
+    	<polygon id="path-1" points="13 11 13 4 11 4 11 11 4 11 4 13 11 13 11 20 13 20 13 13 20 13 20 11"></polygon>
+	</defs>
+	<g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+    	<g id="icons-/-functional-/-simple-/-plus" transform="translate(-4.000000, -4.000000)">
+        	<mask id="mask-2" fill="white">
+            	<use xlink:href="#path-1"></use>
+        	</mask>
+        	<use id="shape" fill="#D8D8D8" xlink:href="#path-1"></use>
+    	</g>
+	</g>
+</svg>
