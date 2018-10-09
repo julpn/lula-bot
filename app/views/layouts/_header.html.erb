@@ -1,15 +1,18 @@
 <div class="header">
   <div id="logo">
-    <%= image_tag("logo.png", size: "250x73", alt: "lula logo") %>
+    <%= image_tag("logo.png", size: "89x24", alt: "lula logo") %>
   </div>
   <div class="header-links">
     <% if user_signed_in? %>
       <div class="dropdown">
-        <button class="dropbtn"><%=current_user.first_name%></button>
+        <button class="dropbtn">
+          <h3>My Account</h3>
+          <div class="icon"><%= image_tag("icons/arrow_down.svg") %></div>
+        </button>
         <div class="dropdown-content">
-          <a href="/messages">My Messages</a>
-          <a href="/guests">My Guests</a>
-          <%= link_to('Logout', destroy_user_session_path, method: :delete) %>
+          <a href="/guests">Guests</a>
+          <a href="/messages">Chatbot Messages</a>
+          <%= link_to('Log Out', destroy_user_session_path, method: :delete) %>
         </div>
       </div>
     <% else %>

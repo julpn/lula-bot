@@ -1,5 +1,22 @@
-.content {
-  width: 400px;
-  padding: 20px;
-  display: inline-block;
+@import "global";
+
+.guest-entry {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+}
+
+.guest-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.row {
+  height: 36px;
+
+  background-color: $white;
+  &.even {
+    background-color: $gray10;
+  }
 }

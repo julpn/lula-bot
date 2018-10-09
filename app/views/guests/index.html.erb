@@ -1,30 +1,29 @@
 <div class="container">
-   <div class="content">
-    <%= form_with scope: :guest, local: true do |form| %>
-      <p>
-        <%= form.label :name %><br>
-        <%= form.text_field :first_name %>
-      </p>
-      <p>
-        <%= form.label :phone_number %><br>
-        <%= form.text_field :phone %>
-      </p>
-      <p>
-        <%= form.submit %>
-      </p>
-    <% end %>
+   <%= form_with scope: :guest, class: "guest-entry", local: true do |form| %>
+     <p>
+       <%= form.text_field :first_name, class: "input", placeholder: "First Name"  %>
+     </p>
+     <p>
+       <%= form.text_field :phone, class: "input", placeholder: "888-888-8888" %>
+     </p>
+     <p>
+       <%= form.submit "Add", class: "button primary medium" %>
+     </p>
+   <% end %>
 
-    <table border="1">
-      <tr>
-        <th>Guest Name</th>
-        <th>Phone Number</th>
+  <table class="guest-table">
+    <% @guests.each_with_index do |guest, index| %>
+      <tr class="row <%= "even" if index.even? %>">
+        <td>
+          <label class="check-container">
+            <input type="checkbox">
+            <span class="checkmark"></span>
+          </label>
+        </td>
+        <td><%= guest.first_name %></td>
+        <td><%= guest.phone %></td>
       </tr>
-      <% @guests.each do |guest| %>
-        <tr>
-          <td><%= guest.first_name %></td>
-          <td><%= guest.phone %></td>
-        </tr>
-      <% end %>
-    </table>
-  </div>
+    <% end %>
+  </table>
+
 </div>
