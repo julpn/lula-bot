@@ -10,6 +10,7 @@
 .guest-table {
   width: 100%;
   border-collapse: collapse;
+  margin-bottom: 24px;
 }
 
 .row {
@@ -18,5 +19,110 @@
   background-color: $white;
   &.even {
     background-color: $gray10;
+  }
+
+  /* On mouse-over, add sky background color */
+  &:hover {
+    background-color: $sky;
+  }
+}
+
+.heading {
+  border-bottom: solid 1px $gray40;
+  &:hover {
+    background-color: inherit;
+  }
+}
+
+.input {
+  border: 2px solid;
+  border-color: $gray20;
+  height: 32px;
+  width: 300px;
+  margin: 12px 24px 12px 0;
+}
+
+.add-guest {
+  margin: 12px 24px 12px 0;
+}
+
+.form-submit {
+  display: flex;
+  flex-direction: row;
+}
+
+.checkmark-column {
+  min-width: 24px;
+  text-align: center;
+  vertical-align: middle;
+  padding: 6px;
+}
+
+.check-container {
+  display: block;
+  position: relative;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.check-container input {
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 16px;
+  width: 16px;
+  border: 2px solid;
+  border-color: $midnight;
+}
+
+/* When the checkbox is checked, add a black background */
+.check-container input:checked ~ .checkmark {
+  background-color: $midnight;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.check-container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.check-container .checkmark:after {
+  left: 4px;
+  width: 5px;
+  height: 12px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+#delete-button {
+  background: transparent;
+  border: none !important;
+  padding: 0;
+  margin: 24px 0;
+
+  &.hidden {
+    display: none;
   }
 }

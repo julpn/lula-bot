@@ -19,6 +19,7 @@ gem 'devise'
 gem 'airbrake', '~> 7.3'
 gem 'twilio-ruby', '~> 5.13.0'
 gem 'multipart-post'
+gem 'jquery-rails'
 
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'mini_racer', platforms: :ruby

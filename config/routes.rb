@@ -1,7 +1,11 @@
 Rails.application.routes.draw do
   get 'message/index'
   get 'guests', to: 'guests#index'
-  resources :guests
+  resources :guests do
+    collection do
+      delete 'destroy_multiple'
+    end
+  end
 
   resources :messages
   get 'messages', to: 'message#index'
