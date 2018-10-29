@@ -1,7 +1,5 @@
-<h2>
-  <a href="/messages/new">Add a new message</a>
-</h2>
 <div class="container">
+  <h1 class="page-title">Chatbot Messages</h1>
 
   <div class="content">
     <div class="square-container">
@@ -9,12 +7,20 @@
         <div class="square">
           <%= link_to edit_message_path(message) do %>
             <div class="content">
-              <h4><%= message.title %></h4>
-              <h4><%= message.scheduled_time %></h4>
+              <h3 class="title"><%= message.title %></h3>
+              <p2 class="send-date">Send: <%= message.scheduled_time %></p2>
             </div>
           <% end %>
         </div>
       <% end %>
+
+      <div class="square new-message">
+        <%= link_to new_message_path do %>
+          <div class="content">
+            <h3>+ New Message</h3>
+          </div>
+        <% end %>
+      </div>
     </div>
   </div>
 </div>
