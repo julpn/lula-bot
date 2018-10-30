@@ -1,5 +1,12 @@
 @import "global";
 
+.guests-info-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+}
+
 .guest-entry {
   display: flex;
   justify-content: space-between;
@@ -38,8 +45,18 @@
   border: 2px solid;
   border-color: $gray20;
   height: 32px;
+  padding-left: 8px;
   width: 300px;
   margin: 12px 24px 12px 0;
+  font-size: 16px;
+
+  &::placeholder {
+    color: $gray60;
+    font-size: 16px;
+  }
+  &:focus::-webkit-input-placeholder {
+    opacity: 0;
+  }
 }
 
 .add-guest {
@@ -120,7 +137,6 @@
   background: transparent;
   border: none !important;
   padding: 0;
-  margin: 24px 0;
 
   &.hidden {
     display: none;

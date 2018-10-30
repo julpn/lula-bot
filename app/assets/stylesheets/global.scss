@@ -12,8 +12,8 @@ $gray20: #E6E6E6;
 $gray40: #BFBFBF;
 $gray60: #808080;
 
-body {
-  font-family: 'Source Sans Pro', sans-serif;
+* {
+  font-family: 'Source Sans Pro', sans-serif !important;
 }
 
 a {
@@ -120,6 +120,13 @@ p.gray {
     background-color: $white;
     color: $midnight;
     border: solid 2px $midnight;
+  }
+
+  &.disabled {
+    background-color: $gray40;
+    color: $white;
+    border: none;
+    box-shadow: none;
   }
 
   &.medium {

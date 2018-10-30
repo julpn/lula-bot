@@ -1,14 +1,16 @@
 <div class="container">
   <h1 class="page-title">Guests</h1>
 
-  <p class="gray">Enter guest information manually or click "Import Guests" to upload an excel file.</p>
-
-  <%= form_tag destroy_multiple_guests_path, method: :delete do %>
+  <div class="guests-info-container">
+    <p class="gray">Enter guest information manually or click "Import Guests" to upload an excel file.</p>
     <%= button_tag(type: "submit", id: "delete-button", class: "hidden") do %>
       <div class="button secondary medium">
         <h3>Delete Selected</h3>
       </div>
     <% end %>
+  </div>
+
+  <%= form_tag destroy_multiple_guests_path, method: :delete do %>
 
     <table class="guest-table">
       <tr class="row heading">
@@ -27,14 +29,15 @@
         <%= form_with scope: :guest, class: "guest-entry", local: true do |form| %>
           <td class="checkmark-column"></td>
           <td>
-            <%= form.text_field :first_name, class: "input", placeholder: "First Name"  %>
+            <%= form.text_field :first_name, class: "input guest", placeholder: "First Name", required: true %>
           </td>
           <td>
-            <%= form.text_field :last_name, class: "input", placeholder: "Last Name"  %>
+            <%= form.text_field :last_name, class: "input guest", placeholder: "Last Name", required: true %>
           </td>
           <td class="form-submit">
-            <%= form.text_field :phone, class: "input", placeholder: "888-888-8888" %>
-            <%= form.submit "Add", name: "add_guests", class: "button primary medium add-guest" %>
+            <%= form.text_field :phone, class: "input guest", placeholder: "888-888-8888",
+                                        type: "tel", pattern: "[0-9]{3}-[0-9]{3}-[0-9]{4}", required: true %>
+            <%= form.submit "Add", name: "add_guests", class: "button primary medium add-guest disabled" %>
           </td>
         <% end %>
       </tr>
