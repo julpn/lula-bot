@@ -1,4 +1,7 @@
+import { parsePhoneNumber, AsYouType } from 'libphonenumber-js';
+
 function inputsAreValid() {
+  console.log("are you valid");
   let isValid = true;
   $('input').filter('[required]').each(function() {
     if ($(this).val() === '') {
@@ -29,10 +32,9 @@ $(document).ready(function(){
     addButton.toggleClass("disabled", !inputsAreValid());
   });
 
-  // // Auto-format phone number
-  // $("#phone-input").keyup(function() {
-  //   console.log("hi");
-  //   var phoneNumber = parsePhoneNumber('+12133734253')
-  //   console.log(phoneNumber);
-  // });
+  // Auto-format phone number
+  $("#phone-input").keyup(function() {
+    const num = new AsYouType('US').input($(this).val());
+    $(this).val(num);
+  });
 });

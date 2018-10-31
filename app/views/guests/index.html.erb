@@ -35,8 +35,8 @@
             <%= form.text_field :last_name, class: "input guest", placeholder: "Last Name", required: true %>
           </td>
           <td class="form-submit">
-            <%= form.text_field :phone, class: "input guest", placeholder: "888-888-8888",
-                                        type: "tel", pattern: "[0-9]{3}-[0-9]{3}-[0-9]{4}", required: true %>
+            <%= form.text_field :phone, class: "input guest", id: "phone-input", placeholder: "888-888-8888",
+                                        type: "tel", pattern: "[(][0-9]{3}[)] [0-9]{3}-[0-9]{4}", required: true %>
             <%= form.submit "Add", name: "add_guests", class: "button primary medium add-guest disabled" %>
           </td>
         <% end %>
