@@ -17,6 +17,7 @@ class GuestsController < ApplicationController
                         user: current_user)
       guest.save
       @guests = current_user.guests
+      @guests_added = 1
     else
       Guest.destroy(params[:guests])
     end

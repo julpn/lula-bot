@@ -21,6 +21,12 @@ $(document).ready(function(){
     deleteButton.toggleClass("hidden");
   });
 
+  // TODO: this is WIP
+  $('#check_all').on("click", function() {
+    var message = $('.guest-info-bar');
+    message.toggleClass("hidden");
+  });
+
   $(".checkmark").click(function() {
     var deleteButton = $('#delete-button');
     deleteButton.toggleClass("hidden");

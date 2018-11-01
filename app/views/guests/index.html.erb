@@ -8,8 +8,10 @@
         <h3>Delete Selected</h3>
       </div>
     <% end %>
+  </div>
 
-    <div class="guest-info-bar">Added successfully!</div>
+  <div class="guest-info-bar hidden">
+    <p class="guest-info-message">Added successfully!</p>
   </div>
 
   <%= form_tag destroy_multiple_guests_path, method: :delete do %>
