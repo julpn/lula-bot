@@ -13,6 +13,7 @@ RUN mkdir /wedding-bot
 WORKDIR /wedding-bot
 COPY Gemfile /wedding-bot/Gemfile
 COPY Gemfile.lock /wedding-bot/Gemfile.lock
+
 RUN bundle install
 RUN bundle exec rails webpacker:install
 

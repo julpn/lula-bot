@@ -18,8 +18,8 @@
   box-shadow: 6px 6px $lilac;
 
   &:hover {
-    top: -6px;
-    left: -6px;
+    transform: translate(-6px, -6px);
+    -webkit-transition: all 0.3s;
     box-shadow: 12px 12px $lilac;
   }
 

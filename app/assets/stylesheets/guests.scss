@@ -7,6 +7,12 @@
   flex-direction: row;
 }
 
+.guest-info-bar {
+  height: 50px;
+  opacity: 0.2;
+  background-color: var(--positive);
+}
+
 .guest-entry {
   display: flex;
   justify-content: space-between;
