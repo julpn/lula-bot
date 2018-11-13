@@ -1,7 +1,6 @@
 import { parsePhoneNumber, AsYouType } from 'libphonenumber-js';
 
 function inputsAreValid() {
-  console.log("are you valid");
   let isValid = true;
   $('input').filter('[required]').each(function() {
     if ($(this).val() === '') {

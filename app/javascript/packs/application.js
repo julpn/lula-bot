@@ -11,3 +11,4 @@ import $ from 'jquery';
 import "jquery-ujs";
 
 import '../src/js/guests.js';
+import '../src/js/modal.js';
