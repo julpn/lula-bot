@@ -39,7 +39,7 @@
 
   background-color: $white;
   &.even {
-    background-color: $gray10;
+    background-color: $lilac-light;
   }
 
   /* On mouse-over, add sky background color */
@@ -48,33 +48,28 @@
   }
 }
 
+.guest-input-cell {
+  width: 324px;
+}
+
+.submit {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-right: 0;
+  width: 275px;
+}
+
+#phone-input {
+  width: 186px;
+  margin-right: 12px;
+}
+
 .heading {
   border-bottom: solid 1px $gray40;
   &:hover {
     background-color: inherit;
   }
-}
-
-.input {
-  border: 2px solid;
-  border-color: $gray20;
-  height: 32px;
-  padding-left: 8px;
-  width: 300px;
-  margin: 12px 24px 12px 0;
-  font-size: 16px;
-
-  &::placeholder {
-    color: $gray60;
-    font-size: 16px;
-  }
-  &:focus::-webkit-input-placeholder {
-    opacity: 0;
-  }
-}
-
-.add-guest {
-  margin: 12px 24px 12px 0;
 }
 
 .form-submit {

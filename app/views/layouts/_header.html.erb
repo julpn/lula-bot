@@ -16,20 +16,14 @@
         </div>
       </div>
     <% else %>
-      <button id="myBtn">Open Modal</button>
-      <%= render "layouts/modal" %>
-
-
-      <%= link_to(new_user_session_path, class: 'dropdown') do %>
-        <h3>Log In</h3>
-      <% end %>
+      <h3 id="login">Log In</h3>
 
       <div class="button-container">
-        <a href="/messages">
-          <div class="button medium secondary">
-            <h3>Make a Bot</h3>
-          </div>
-        </a>
+        <div id="make-a-bot" class="button medium secondary">
+          <h3>Make a Bot</h3>
+        </div>
+        <%= render "layouts/login_modal" %>
+        <%= render "layouts/create_account_modal" %>
       </div>
     <% end %>
   </div>
