@@ -14,7 +14,7 @@ class MessagesController < ApplicationController
     @message.user = current_user
     if @message.save
       flash[:success] = "Saved!"
-      redirect_to action: "index"
+      render "edit"
     else
       render 'new'
     end

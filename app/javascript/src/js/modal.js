@@ -9,6 +9,10 @@ $(document).ready(function(){
     $("#create-account-modal").css("display", "block");
   });
 
+  $('.new-message').on("click", function() {
+    $("#new-message-modal").css("display", "block");
+  });
+
   // When the user clicks on <span> (x), close the modal
   $('.close').on("click", function() {
     $(".modal").css("display", "none");

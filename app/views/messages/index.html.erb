@@ -8,19 +8,20 @@
           <%= link_to edit_message_path(message) do %>
             <div class="content">
               <h3 class="title"><%= message.title %></h3>
-              <p2 class="send-date">Send: <%= message.scheduled_time %></p2>
+              <p2 class="send-date">
+                <%= message.scheduled_date ? "Send: " + message.scheduled_date : nil %>
+              </p2>
             </div>
           <% end %>
         </div>
       <% end %>
 
       <div class="square new-message">
-        <%= link_to new_message_path do %>
-          <div class="content">
-            <h3>+ New Message</h3>
-          </div>
-        <% end %>
+        <div class="content" id="new-message">
+          <h3>+ New Message</h3>
+        </div>
       </div>
     </div>
   </div>
+  <%= render "layouts/new_message_modal" %>
 </div>

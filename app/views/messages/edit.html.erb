@@ -1,4 +1,29 @@
-<h2>Edit message</h2>
 <div class="container">
-  <%= render 'form' %>
+  <%= form_for @message do |m| %>
+    <div class="edit-message-header">
+      <h1 class="page-title"><%= @message.title || "New Message" %></h2>
+      <div class="buttons">
+        <%= link_to "Cancel", :back, class: "button secondary medium" %>
+        <span class="form-submit">
+          <%= m.submit "Save & Close", name: "create", class: "button primary medium" %>
+        </span>
+      </div>
+    </div>
+
+    <div class="input-container">
+      <p2 class="input-label">
+      <%= m.label :send %><br>
+      <%= m.text_field :scheduled_time, class: "datepicker", class: "input" %>
+      <!--  datetime_local_field -->
+      </p2>
+    </div>
+
+    <div class="input-container">
+      <h2>
+      <%= m.label :chatbot_says %><br>
+      <%= m.text_field :content, class: "input paragraph"%>
+      </h2>
+    </div>
+  <% end %>
+
 </div>
