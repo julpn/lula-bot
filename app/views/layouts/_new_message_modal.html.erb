@@ -1,0 +1,29 @@
+<div id="new-message-modal" class="modal">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h2 class="text-center">New Message</h2>
+    </div>
+    <div class="modal-body">
+      <%= form_with scope: :message, class: "new-message-form", local: true do |f| %>
+        <div class="input-container">
+          <p class="input-label">Enter a name for your message.</p>
+          <%= f.text_field :title, class: "input large", id: "message-title-input", placeholder: "Enter name",
+                                   type: "text", required: true %>
+        </div>
+
+        <div class="buttons">
+          <div class="button-container login-button close">
+            <div class="button medium secondary">
+              <h3>Cancel</h3>
+            </div>
+          </div>
+          <div class="button-container login-button">
+            <span class="form-submit">
+              <%= f.submit "Continue", name: "add_message", class: "button primary medium disabled" %>
+            </span>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
